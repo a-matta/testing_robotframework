@@ -1,0 +1,17 @@
+{
+  "template": "https://github.com/a-matta/playwright-python-cookiecutter",
+  "commit": "d9f1659ebcf9a0087b7f391c50c5898958ef6896",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author_name": "amrita",
+      "author_email": "matta.amrita@gmail.com",
+      "github_username": "a-matta",
+      "project_name": "testing_robot",
+      "project_slug": "testing_robot",
+      "project_short_description": "A short description of the project",
+      "_template": "https://github.com/a-matta/playwright-python-cookiecutter"
+    }
+  },
+  "directory": null
+}

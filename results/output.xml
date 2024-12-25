@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.3 on linux)" generated="2024-12-25T22:52:24.002816" rpa="false" schemaversion="5">
+<suite id="s1" name="Testing Robotframework" source="/home/amatta/code/testing_robotframework">
+<suite id="s1-s1" name="Tests" source="/home/amatta/code/testing_robotframework/tests">
+<suite id="s1-s1-s1" name="Simple Testcase" source="/home/amatta/code/testing_robotframework/tests/simple_testcase.robot">
+<test id="s1-s1-s1-t1" name="Handle Alerts" line="60">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-12-25T22:52:24.076535" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-25T22:52:24.076363" elapsed="1.459282"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-25T22:52:25.536794" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-25T22:52:25.536379" elapsed="2.105376"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-25T22:52:27.642033" elapsed="0.030847"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-25T22:52:27.673830" level="INFO">Clicking element 'id=alertBtn'.</msg>
+<arg>id=alertBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-25T22:52:27.673265" elapsed="0.114266"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-12-25T22:52:27.788061" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-12-25T22:52:27.787821" elapsed="0.029087"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-25T22:52:27.817429" elapsed="0.090735"/>
+</kw>
+<status status="PASS" start="2024-12-25T22:52:24.075694" elapsed="3.832862"/>
+</test>
+<status status="PASS" start="2024-12-25T22:52:24.014483" elapsed="3.894820"/>
+</suite>
+<status status="PASS" start="2024-12-25T22:52:24.013786" elapsed="3.896425"/>
+</suite>
+<status status="PASS" start="2024-12-25T22:52:24.005103" elapsed="3.905791"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testing Robotframework">Testing Robotframework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Testing Robotframework.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Simple Testcase">Testing Robotframework.Tests.Simple Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
