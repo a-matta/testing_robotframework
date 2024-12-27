@@ -70,10 +70,22 @@ Handle Alerts
     Sleep    5s
     Close Browser
 
+For Loop
+    @{item}=    Create List    121    52    140    84    5
+    FOR    ${counter}    IN    @{item}
+        IF    ${counter} == 140    BREAK
+        Log To Console    ${counter}
+    END
 
-
-*** Keywords ***
-Open Browser Key
-    [Documentation]    Open Browser
-    [Arguments]    ${URL}    ${BROWSER}
-    Open Browser    ${URL}    ${BROWSER}
+Count And Extract Links
+    Open Browser    https://demo.guru99.com/test/newtours/    browser=${BROWSER}
+    Maximize Browser Window
+    ${element_count}=    Get Element Count    xpath=//a
+    ${links}=    Get WebElements    xpath=//a
+    ${count}=    Get Length    ${links}
+    Log To Console    ${count}
+    FOR    ${link}    IN    1    ${count}
+        ${link}=    Get Text    xpath=(//a)[${link}]
+        Log To Console    ${link}
+    END
+    Close Browser
