@@ -12,8 +12,7 @@ ${BROWSER}      chrome
 
 *** Test Cases ***
 Login Test
-    Open Browser    ${URL}    browser=${BROWSER}
-    Maximize Browser Window
+    Open Browser Key    ${URL}    ${BROWSER}
     Click Element    link=Log in
     Input Text    id=Email    [email protected]
     Input Text    id=Password    password
@@ -62,4 +61,18 @@ Handle Alerts
     Maximize Browser Window
     Click Element    id=alertBtn
     Handle Alert    accept
+    Sleep    5s
+    Click Element    id=confirmBtn
+    Handle Alert    accept
+    Click Element    id=confirmBtn
+    Handle Alert    dismiss
+    Sleep    5s
     Close Browser
+
+
+
+*** Keywords ***
+Open Browser Key
+    [Documentation]    Open Browser
+    [Arguments]    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}
