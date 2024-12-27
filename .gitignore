@@ -13,3 +13,10 @@ test-results/
 
 # allure
 allure-results/
+
+#robotframework
+selenium-screenshot-*.png
+geckodriver.log
+*.html
+*.xml
+
