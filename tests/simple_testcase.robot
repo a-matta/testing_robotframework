@@ -89,3 +89,31 @@ Count And Extract Links
         Log To Console    ${link}
     END
     Close Browser
+
+Handle Html Tables
+    Open Browser    https://www.seleniumeasy.com/test/table-search-filter-demo.html    browser=${BROWSER}
+    Maximize Browser Window
+    ${rows}=    Get WebElements    xpath=//table[@id='task-table']//tr
+    ${rows_count}=    Get Length    ${rows}
+    Log To Console    ${rows_count}
+    FOR    ${row}    IN    2    ${rows_count}
+        ${row_data}=    Get Text    xpath=(//table[@id='task-table']//tr)[${row}]
+        Log To Console    ${row_data}
+    END
+    Close Browser
+
+Handle Web Tables
+    Open Browser    https://testautomationpractice.blogspot.com/    browser=${BROWSER}
+    Maximize Browser Window
+    ${rows}=    Get WebElements    xpath=//table[@name='BookTable']//tr
+    ${rows_count}=    Get Length    ${rows}
+    ${row_count}=    Get Element Count    xpath=//*[@id='HTML1']/div[1]/table/tbody/tr
+    Log To Console    ${row_count}
+    ${coloumn_count}=    Get Element Count    xpath=//*[@id='HTML1']/div[1]/table/tbody/tr/td
+    Log To Console    ${coloumn_count}
+    ${header_count}=    Get Element Count    xpath=//*[@id='HTML1']/div[1]/table/tbody/tr/th
+    Log To Console    ${header_count}
+    ${data}=    Get Text    xpath=//*[@id="HTML1"]/div[1]/table/tbody/tr[2]/td[1]
+    Log To Console    ${data}
+    Table Header Should Contain    xpath=//table[@name="BookTable"]    Author
+    Close Browser
